@@ -1,0 +1,4 @@
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.exe
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.csprojAssemblyReference.cache
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.AssemblyInfoInputs.cache
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.AssemblyInfo.cs
