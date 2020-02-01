@@ -2,3 +2,16 @@ C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcor
 C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.csprojAssemblyReference.cache
 C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.AssemblyInfoInputs.cache
 C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.AssemblyInfo.cs
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.deps.json
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.runtimeconfig.json
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.runtimeconfig.dev.json
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.dll
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WAAPI_Switch_JN.pdb
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WaapiClientCore.dll
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WaapiClientJson.dll
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WaapiClientCore.pdb
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\bin\Debug\netcoreapp3.1\WaapiClientJson.pdb
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.csproj.CopyComplete
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.dll
+C:\Users\jpnix\Documents\GitHub\WAAPI_Switch_JN\WAAPI_Switch_JN\obj\Debug\netcoreapp3.1\WAAPI_Switch_JN.pdb
