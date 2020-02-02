@@ -10,5 +10,7 @@ namespace WAAPI_Switch_JN
         }
         public List<SwitchContainer> containers { get; set; }
         public List<SwitchGroup> groups { get; set; }
+
+     
     }
 }

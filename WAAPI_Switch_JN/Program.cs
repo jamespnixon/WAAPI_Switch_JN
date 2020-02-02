@@ -24,6 +24,106 @@ namespace WAAPI_Switch_JN
             await SetSwitchAssignments(client, switches);
             await client.Close();
 
+            client = CreateConnection().Result;
+            await SetDefaults(client, switches);
+            await client.Close();
+
+        }
+
+        private static async Task SetDefaults(AK.Wwise.Waapi.JsonClient client, SwitchCollection switches)
+        {
+        
+        Start:
+
+            Console.WriteLine("Would you like to set default assignments? (y/n)");
+          
+            var result = Console.ReadKey();
+            Console.WriteLine();
+
+            if (result.KeyChar == 'y')
+            {
+
+                // create a new switch collection list to house containers that don't have default switch assignments
+                List<SwitchGroup> defaultSwitchesUnassigned = new List<SwitchGroup>();
+
+                //query the default switch or state value for each switch container
+                foreach (var container in switches.containers)
+                {
+                    var resultDefaultCheck = await client.Call(
+                    ak.wwise.core.@object.get,
+                    new JObject
+                    (
+                        new JProperty("from", new JObject(new JProperty("id", new JArray(new string[] { container.id }))))
+                    ),
+                    new JObject
+                    (
+                        new JProperty("return", new string[] { "@DefaultSwitchOrState" })
+                    ));
+
+                    // create a token for the data returned from DefaultSwitchOrState
+                    var token = resultDefaultCheck["return"][0]["@DefaultSwitchOrState"];                 
+
+                    // if the name of the token equals null, add it to a list of switch containers that need assignment
+                    if (token["name"] == null)
+                        {
+                        
+                        Console.WriteLine("Adding " + container.id + " to defaultSwitchUnassigned list");
+                        defaultSwitchesUnassigned.Add(token.ToObject<SwitchGroup>());
+                                             
+                    }
+           
+                }
+                //*************************************************************
+                // NEED TO FIGURE OUT HOW TO LIMIT THE NEXT STEP TO THE CONTAINERS FOUND IN defautlSwitchesUnassigned  
+                //*************************************************************
+
+                foreach (var group in switches.groups)
+                {
+                    int choice = 1;
+                    Console.WriteLine("Select default assignment for " + group.name + " : ");
+
+                    foreach (var child in group.switches)
+                    {
+                        Console.WriteLine(choice + " - " + child.name);
+                        choice++;
+                    }
+
+                Select:
+
+                    Console.WriteLine("Enter Selection: ");
+                    var index = Console.ReadKey();
+                    Console.WriteLine();
+
+                    if (int.Parse(index.KeyChar.ToString()) > group.switches.Count || int.Parse(index.KeyChar.ToString()) < 1 || !(char.IsDigit(index.KeyChar)))
+                    {
+                        goto Select;
+                    }
+                    else
+                    {
+                        var container = switches.containers.Where(c => c.name == group.name).First();
+                        var defaultSwitch = group.switches.ElementAt(int.Parse(index.KeyChar.ToString()) - 1);
+
+                        await client.Call(
+                            ak.wwise.core.@object.setReference,
+                            new JObject
+                            (
+                                new JProperty("reference", "DefaultSwitchOrState"),
+                                new JProperty("object", container.id),
+                                new JProperty("value", defaultSwitch.id)
+                            ),
+                            null
+                        );
+                    }
+                }
+            }
+            else if (result.KeyChar == 'n')
+            {
+                return;
+            }
+            else
+            {
+                goto Start;
+            }
         }
 
         private static async Task MatchAndAssignSwitches(AK.Wwise.Waapi.JsonClient client, List<SwitchContainerChild> children, SwitchGroup matchingGroup)

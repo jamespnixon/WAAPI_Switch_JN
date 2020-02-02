@@ -12,7 +12,7 @@ namespace WAAPI_Switch_JN
         public string id { get; set; }
         public List<SwitchAssignment> assignments = new List<SwitchAssignment>();
         public List<SwitchContainerChild> children = new List<SwitchContainerChild>();
-
+    
     }
 
     public class SwitchAssignment
@@ -29,4 +29,6 @@ namespace WAAPI_Switch_JN
         public string id { get; set; }
 
     }
+
+
 }
